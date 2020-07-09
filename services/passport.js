@@ -46,6 +46,8 @@ const localStrategy = new LocalStrategy({ usernameField: "email" }, function (
           return done(null, false);
         }
       });
+    } else {
+      return done(null, false);
     }
   });
 });
